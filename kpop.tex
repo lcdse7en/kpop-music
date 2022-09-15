@@ -1,0 +1,185 @@
+\documentclass[letterpaper, 10pt]{article}
+\usepackage[margin=0.45in]{geometry}
+\usepackage{titlesec}
+\usepackage{metalogo}
+\usepackage{xeCJK}
+\usepackage{kotex}
+\usepackage{tabularray}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks=true,urlcolor=Blue]{hyperref}
+\usepackage{titling}
+
+\usepackage{titlesec}
+
+\definecolor{mygrey}{RGB}{128,128,128}
+\definecolor{myteal}{RGB}{0,128,128}
+\definecolor{mypink}{RGB}{250,218,221}
+
+
+\setmainfont{Noto Sans CJK SC}
+\setCJKmainfont{Noto Sans CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\setCJKmonofont{Noto Sans CJK SC}
+
+\NewTableCommand\myhline{\hline[0.2em,black]}
+
+
+\let\oldhref\href
+\renewcommand{\href}[3][blue]{\oldhref{#2}{\color{#1}{#3}}}
+\newcommand{\pdf}{\includegraphics[height=.85em]{png/pdf.png}}
+
+% \title{Constructing a Nuclear Reactor Using Only Coconuts}
+\author{LcdSe7en}
+\date{\today}
+
+
+% Custom title command.
+\renewcommand{\maketitle}{
+	\hspace{.25\textwidth}
+	\begin{minipage}[t]{.5\textwidth}
+    \par{\centering{\Huge  \texttt{\theauthor}}\par}
+	\end{minipage}
+	\begin{minipage}[t]{.25\textwidth}
+   {\footnotesize\hfill{}\color{gray}
+     \hfill{}Download this document:
+
+     \hfill{}\href[gray]{https://github.com/lcdse7en/archlinux}{kpop.pdf \pdf}
+
+     \hfill{}(Last updated \thedate.)
+    }
+	\end{minipage}
+}
+
+\UseTblrLibrary{counter}
+\newcounter{mycnta}
+\newcommand{\mycnta}{\stepcounter{mycnta}\arabic{mycnta}}
+\begin{document}
+
+\maketitle
+\NewTblrTheme{fancy}{
+\SetTblrStyle{firsthead}{font=\bfseries}
+\SetTblrStyle{firstfoot}{fg=blue2}
+\SetTblrStyle{middlefoot}{\itshape}
+\SetTblrStyle{caption-tag}{red2}
+}
+
+  \begin{longtblr}[
+      theme = fancy,
+      caption = {Kpop Music},
+    ]{
+      width=0.99\textwidth,
+      rowhead = 1,
+      verb,
+      % hlines,
+      % baseline=t,
+      colspec={|l|X[2.8]|X[2.8]|X[2.8]|X[4.2]|X[1.8]|},
+      row{odd} = {bg=mypink},
+      row{1}   = {bg=myteal, fg=white},
+      }
+      \myhline
+      \SetRow{c} ID & Artist     & Song(KO/EN)           & Song(CN/EN)       & Ablum                              & Issue Time \\
+      \myhline
+      \mycnta & 김조한                & 이밤의 끝을 잡고      & 抓住今晚的最后    & Joint Live Concert Album           & 2001-08-01 \\
+      \mycnta & 임재범                & 너를 위해             & 为了你            & Story of two years                 & 2000-05-16 \\
+      \mycnta & 보아                  & Only One              & Only One          & Boa The 7th Album Only One         & 2012-07-22 \\
+      \mycnta & 태연                  & I                     & I                 & The 1st Mini Album                 & 2015-10-07 \\
+      \mycnta & 박묵환                & 그것만은              & 只属于我          & 천국의 게단                        & 2003-12-24 \\
+      \mycnta & LeeHi                 & 한숨                  & 叹息              & Seoulite                           & 2016-03-09 \\
+      \mycnta & 에픽하이              & 스포일러              & spoiler           & 신발장                             & 2014-10-21 \\
+      \mycnta & 박봄                  & You and I             & You and I         & YOU AND I                          & 2009-10-28 \\
+      \mycnta & 에일리                & 잠시 안녕처럼         & 就像暂时分手      & 운명처럼 널 사랑해 OST Part.6      & 2014-08-13 \\
+      \mycnta & 에일리                & 눈물이 맘을 훔쳐서    & 眼泪把心偷了      & 비밀 OST Part.5                    & 2013-12-09 \\
+      \mycnta & 박휴신                & 야생화                & 野生花            & 아생화                             & 2014-03-28 \\
+      \mycnta & 임재범\&박정현        & 사랑보다 깁은 상처    & 比爱更深的伤痕    & History of 임재범 8600             & 2000-11-02 \\
+      \mycnta & 유나킴\&윤미래        & 이젠 너 없이도        & 现在即使没有你    & Love Me Love                       & 2014-05-23 \\
+      \mycnta & 매드 클라운\& 소유    & 차해 빠졌어           & 太善良            & 착해 빠졌어                        & 2013-09-10 \\
+      \mycnta & 효린                  & 안녕                  & 再见              & 별에서 온 그대 OST Part.4          & 2014-01-22 \\
+      \mycnta & 채연                  & 한 사람               & 一个人            & My Love                            & 2007-03-30 \\
+      \mycnta & 장재인\&나쑈          & 환청                  & 幻听              & 킬미힐미 OST Part.1                & 2015-01-14 \\
+      \mycnta & 린                    & Love Story            & Love Story        & 푸른 바다의 전설 OST Part.1        & 2016-11-17 \\
+      \mycnta & 태양                  & 나만 바라봐           & 只看着我          & HOT                                & 2008-05-22 \\
+      \mycnta & 타블로 \&태양         & Tomorrow              & Tomorrow          & 열꽃 Part.2                        & 2011-11-01 \\
+      \mycnta & 찬열                  & Stay with Me          & Stay with Me      & 쓸쓸하고 찬란하神                  & 2016-12-03 \\
+      \mycnta & 플라이 투 더 스카이   & 남자답게              & 像个男人          & Transiton                          & 2006-01-07 \\
+      \mycnta & 코요태                & 실연                  & 失恋              & 실연                               & 1999-11-06 \\
+      \mycnta & 브레이브걸스          & 아나요                & 知道吗            & Brave girls:the Difference         & 2011-04-08 \\
+      \mycnta & 브레이브걸스\&원카인  & 툭하면                & 动辄              & 툭하면(Remix Version)              & 2011-08-26 \\
+      \mycnta & Rain                  & Rainism               & Rainism           & Rainism                            & 2008-10-08 \\
+      \mycnta & MC몽\&정은지          & 널 너무 사랑해서      & 太过爱你          & U.F.O                              & 2016-11-02 \\
+      \mycnta & MC몽\&에일리          & 블랙홀                & 黑洞              & U.F.O                              & 2016-11-02 \\
+      \mycnta & 이정현                & 미쳐                  & 疯掉              & Magic To Go To Star                & 2001-10-23 \\
+      \mycnta & 이정현                & 와                    & 独一无二          & Lets Go To My Star                 & 1999-10-09 \\
+      \mycnta & 투피엠                & Ill Be Back           & Ill Be Back       & Still 2:00PM                       & 2010-10-11 \\
+      \mycnta & 샤이니                & Hello                 & Hello             & Replay everything                  & 2011-06-22 \\
+      \mycnta & 포미닛                & Volume Up(JP)         & Volume Up(JP)     & Best Of 4minute                    & 2012-09-26 \\
+      \mycnta & 거미                  & 치구라도 될 걸 그랬어 & 早知做个朋友也好  & Like Them                          & 2003-02-07 \\
+      \mycnta & 거미                  & 거기 그대로           & 就在那            & Like Them                          & 2003-02-07 \\
+      \mycnta & 카드                  & Trust Me              & Trust Me          & KARD 2nd Mini Album                & 2017-11-21 \\
+      \mycnta & 씨스타 19             & 있다 없으니까         & 因为从有到无      & 있다 없으니까                      & 2013-01-31 \\
+      \mycnta & 씨스타 19             & Ma Boy                & Ma Boy            & Ma Boy                             & 2011-05-03 \\
+      \mycnta & 신용재                & 이유                  & 理由              & 시크릿 가든 OST Special            & 2011-01-21 \\
+      \mycnta & 김준수                & Uncommitted           & Uncommitted       & Uncommitted                        & 2012-08-17 \\
+      \mycnta & 김준수\&타블로        & 꽃                    & 花                & Flower                             & 2015-03-03 \\
+      \mycnta & 이루마                & Kiss The Rain         & Kiss The Rain     & The Best                           & 2011-12-12 \\
+      \mycnta & 박진영\&가인          & 다른 사람 품에 안겨서 & 在别人怀里        & Spring                             & 2012-04-29 \\
+      \mycnta & 예성                  & 너 아니면 안돼        & 非你不可          & 신데렐라 언니 OST                  & 2010-04-01 \\
+      \mycnta & 예성                  & 먹지                  & 墨纸              & 그 겨울 바람이 분다 OST Part.1     & 2013-02-13 \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \mycnta &                       &                       &                   &                                    &  \\
+      \myhline
+  \end{longtblr}
+
+\end{document}
+
+
+
+
+
+
